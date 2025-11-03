@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarto</title>
+    <link rel="stylesheet" href="./css/quarto.css">
 </head>
 <body>
-    aaaaaaaaaaaaaaa
+    <div id="texto">Você está em quarto meio escuro, vendo alguns papéis sobre uma mesa e a porta de saída</div>
+    <p class="p1" onclick="mudarTexto1()">Ir para a porta</p>
+    <p class="p2" onclick="mudarTexto2()">Olhar os papéis</p>
+    <p class="p3" onclick="mudarTexto3()">Chamar por ajuda</p>
+    <p class="p4" onclick="mudarTexto4()">Esperar o tempo passar</p>
+
+    <script>
+        function mudarTexto1() {
+            document.getElementById("texto").textContent = "Está trancada com uma fechadura eletrônica"
+            const senha = prompt("Qual é a senha?");
+            if (senha == "1565") {
+                alert("Você destranca a porta e sai do quarto")
+                window.location.href = "sala.html"
+            } else {
+                alert("A porta permanece trancada")
+            }
+        }
+
+        function mudarTexto2() {
+            document.getElementById("texto").textContent = "Você vê um código escrito: César 4898."
+        }
+
+        function mudarTexto3() {
+            document.getElementById("texto").textContent = "Você grita mas ninguém te ouve"
+        }
+
+        function mudarTexto4() {
+            document.getElementById("texto").textContent = "1 minuto se passa"
+        }
+    </script>
 </body>
 </html>

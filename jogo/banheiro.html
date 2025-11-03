@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarto</title>
+    <link rel="stylesheet" href="./css/banheiro.css">
 </head>
 <body>
-    aaaaaaaaaaaaaaa
+    <div id="texto">Você vai para o banheiro e nele encontra um espelho e uma pia</div>
+    <p class="p1" onclick="mudarTexto1()">Olhar a pia</p>
+    <p class="p2" onclick="mudarTexto2()">Quebrar o espelho</p>
+    <p class="p3" onclick="mudarTexto3()">Olhar na geladeira</p>
+    <p class="p4" onclick="mudarTexto4()">Voltar para sala</p>
+
+    <script>
+        let n = 0
+        function mudarTexto1() {
+            if (n == 0) {
+            const resposta = prompt("Qual é a senha?")
+            if (resposta == "532") {
+                alert("Você abre o armário e encontra um martelo")
+                n += 1
+            } else {
+                alert("O armário continua trancado")
+            }
+        } else {
+            document.getElementById("texto").textContent = "Você já abriu o armário"
+        }
+        }
+
+        function mudarTexto2() {
+            document.getElementById("texto").textContent = "Na parede há um calendário com 3 dias marcados: segunda, quinta, terça"
+        }
+
+        function mudarTexto3() {
+            document.getElementById("texto").textContent = "Na geladeira tem uma folha escrito: quanto maior, melhor"
+        }
+
+        function mudarTexto4() {
+            window.location.href = "sala.html"
+        }
 </body>
 </html>

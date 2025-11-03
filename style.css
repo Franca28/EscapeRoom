@@ -1,0 +1,104 @@
+:root {
+    --branco: #fff;
+    --preto: #111111dc;
+    --cinzaClaro: #bbb;
+    --cinzaEscuro: #333;
+    --vermelho: #ff2110; 
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    color: var(--branco);
+    background-image: url(./ruafundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template: 
+    'nav' 3rem
+    'header' 1fr
+    'main' 2fr
+    'footer' 1fr;
+    font-family: 'Segoe UI';
+}
+
+nav {
+    grid-area: nav;
+    background: var(--cinzaEscuro);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+nav li:hover {
+    transform: scale(1.05);
+}
+
+nav a:hover {
+    color: var(--cinzaClaro);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-shadow: 0 0px 15px var(--vermelho);
+    background: linear-gradient(360deg,rgba(237, 34, 12, 1) 0%, rgba(193, 25, 3, 1) 31%, rgba(84, 10, 0, 1) 100%);
+    cursor: default;
+    user-select: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 2.5rem;
+    gap: 1.5rem;
+    cursor: default;
+}
+
+main section {
+    background: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+    border: 2px solid var(--vermelho);
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--vermelho);
+    user-select: none;
+    font-size: 26px;
+}
+
+main button {
+    transform: scale(2);
+    background: var(--cinzaEscuro);
+    color: var(--branco);
+    box-shadow: 0 0 8px var(--vermelho);
+    cursor: pointer;
+}
+
+main button:hover {
+    transform: scale(1.75);
+    background: #444;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.3rem;
+}

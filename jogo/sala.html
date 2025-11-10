@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/sala.css">
 </head>
 <body>
+    <div id="temporizador">Tempo restante: 10 segundos</div>
     <div id="texto">Você está na sala, pode ir à cozinha, à porta de saída, para o banheiro ou esperar o tempo passar.</div>
     <p class="p1" onclick="mudarTexto1()">Ir à cozinha</p>
     <p class="p2" onclick="mudarTexto2()">ir para porta de saída</p>
@@ -14,6 +15,19 @@
     <p class="p4" onclick="mudarTexto4()">Esperar o tempo passar</p>
 
     <script>
+
+        let segundos = 10
+        const contador = document.getElementById("temporizador")
+        setInterval(() => {
+            if (segundos == 0) {
+                clearInterval();
+                contador.textContent = `Acabou o tempo`
+            } else {
+                segundos--
+            contador.textContent = `Tempo restante: ${segundos} segundos`
+            }
+        }, 1000);
+        
         let n = 0;
         function mudarTexto1() {
             n += 1;

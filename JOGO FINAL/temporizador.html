@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        html {
+            width: 6rem;
+            background-color: #5555;
+            border-radius: 5px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            width: 6rem;
+            background-color: #5555;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="temporizador">05:00</h1>
+
+    <script>
+        const tempo = document.getElementById('temporizador');
+        let segundos = 59;
+        let minutos = 4;
+
+        setInterval(() => {
+            if (minutos == 0 && segundos == 0) {
+                tempo.textContent = `0${minutos}:0${segundos}`;
+                clearInterval();
+            } 
+            else if (segundos == 0) {
+                tempo.textContent = `0${minutos}:0${segundos}`;
+                minutos--;
+                segundos = 59;
+            }
+            else if (minutos == 0 && segundos == 30) {
+                tempo.style.color = 'darkred';
+                tempo.textContent = `0${minutos}:${segundos}`;
+                segundos--;
+            }
+            else if (minutos == 0 && segundos == 59) {
+                tempo.style.color = 'crimson';
+                tempo.textContent = `0${minutos}:${segundos}`;
+                segundos--;
+            }
+            else if (segundos < 10) {
+                tempo.textContent = `0${minutos}:0${segundos}`;
+                segundos--;
+            } 
+            else if (segundos <= 59 && segundos > 0) {
+                tempo.textContent = `0${minutos}:${segundos}`;
+                segundos--;
+            }
+            
+        }, 1000);
+    </script>
+</body>
+</html>

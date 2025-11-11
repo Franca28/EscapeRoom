@@ -5,54 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarto</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-sizing: border-box;
-            color: white;
-        }
-
-        body {
-            background-image: url(/jogo/imgs/Quarto.jpeg);
-            background-size: cover;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 35rem;
-            background-color: #4444447e;
-            border-radius: 2px;
-        }
-
-        p,
-        span {
-            font-size: 40px;
-        }
-
-        .papeis {
-            position: absolute;
-            width: 700px;
-            height: 150px;
-            bottom: 10px;
-            left: 30%;
-            background-color: #0000;
-            cursor: pointer;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="css/quarto.css">
+    <link rel="stylesheet" href="css/temp.css">
 </head>
 
 <body>
-    <header>
-        <p>Objetivo: sair da casa</p>
-        <span id="temporizador">5 minutos restantes</span>
-    </header>
-    <div class="papeis"></div>
-    
+
+    <div id="porta" title="Porta fechada" onclick="abrirPorta()"></div>
+    <div id="cama" title="Esperar passar o tempo" onclick="esperar()"></div>
+    <div id="papeis" title="Olhar os papeis" onclick="olharMesa()"></div>
+
+    <script src="./js/quartoScript.js"></script>
 </body>
 
 </html>

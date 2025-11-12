@@ -13,7 +13,7 @@ function resposta() {
     let cod = prompt("Qual é a sequência?");
     if (cod == "222225") {
         alert("Você acertou a sequência!");
-        alert("Você ouve um som de um espelho quebrando e vai investigar")
+        alert("Você ouve um som do banheiro e vai investigar")
         window.location.href = "/JOGO/frames/frameBanheiro.html";
     } else {
         alert("Acho que não é isso...");

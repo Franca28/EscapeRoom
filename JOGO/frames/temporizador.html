@@ -33,10 +33,11 @@
         let segundos = 59;
         let minutos = 4;
 
-        setInterval(() => {
+        setInterval(function temporizador() {
             if (minutos == 0 && segundos == 0) {
                 tempo.textContent = `0${minutos}:0${segundos}`;
                 clearInterval();
+                window.location.href = "/index.html"
             } 
             else if (segundos == 0) {
                 tempo.textContent = `0${minutos}:0${segundos}`;

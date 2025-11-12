@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background-image: url(/JOGO/imgs/Cozinha.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parede {
+    position: absolute;
+    width: 200px;
+    height: 600px;
+    right: 0;
+    bottom: 50px;
+    background-color: #0005;
+    cursor: pointer;
+}
+
+#dica {
+    position: absolute;
+    display: none;
+    color: black;
+    opacity: 0.2;
+    text-align: center;
+    border-radius: 10px;
+    left: 500px;
+    top: 300px;
+    width: 100px;
+    background-color: antiquewhite;
+}
+
+#calendario {
+    position: absolute;
+    display: none;
+    background-color: #0000;
+    right: 465px;
+    top: 280px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
